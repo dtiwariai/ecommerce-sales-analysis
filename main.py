@@ -424,3 +424,15 @@ category_data["Profit_Margin"] = (
 
 print("\nCategory-wise Profit Margin:")
 print(category_data.sort_values("Profit_Margin", ascending=False))
+
+# ==============================
+# Export Clean Data For Power BI  
+# ==============================
+
+output_path = "data/ecommerce_sales_clean.csv"
+
+df.to_csv(output_path, index=False)
+
+print("\nClean dataset exported successfully")
+print("File:", output_path)
+print("Final Shape:", df.shape)
